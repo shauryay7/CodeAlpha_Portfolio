@@ -2,16 +2,22 @@
 
 import React from 'react';
 import './App.css';
-import HeroSection from './HeroSection'; // Your Hero Section component
-import Header from './Header'; // Importing the Header component
-import SkillsSection from './SkillsSection'; // Importing the SkillsSection component
+import HeroSection from './HeroSection';
+import Header from './Header';
+import SkillsSection from './SkillsSection';
+import Footer from './Footer';
+import ActivitiesAndHonorsSection from './ActivitiesAndHonorsSection';
+import EducationSection from './EducationSection';
 
 function App() {
     return (
         <div className="App">
             <Header />
             <HeroSection />
-            <SkillsSection /> {/* Adding the SkillsSection here */}
+            <SkillsSection />
+            <ActivitiesAndHonorsSection />
+            <EducationSection />
+            <Footer /> {/* Add Footer at the end */}
         </div>
     );
 }

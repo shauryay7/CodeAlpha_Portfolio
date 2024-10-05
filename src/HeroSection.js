@@ -60,11 +60,7 @@ const HeroSection = () => {
                 {/* Ensure the id is unique to this specific element */}
                 <h1 id="code-text">Hi, I'm Shaurya</h1>
                 <p>
-                    I'm a passionate Full Stack web developer with experience
-                    developing Full Stack web applications with Python, Django,
-                    React.js, and Cloud Technologies. I am strongly interested
-                    in learning new technologies and implementing them in my
-                    projects.
+                    Passionate web developer skilled in React.js, Python, C, Java, and C++. Eager to take on challenges, learn, and grow. Ambitious student with strong communication and problem-solving skills.
                 </p>
                 <div className="social-links">
                     <a href="mailto:your-email@example.com" className="btn">Email</a>

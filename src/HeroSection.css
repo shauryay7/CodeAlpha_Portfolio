@@ -31,7 +31,9 @@
     line-height: 1.6;
     animation: fadeInText 1.5s ease-in-out both;
 }
-
+.para{
+    padding: 20px;
+}
 .social-links {
     margin-left: 150px;
     padding: 40px;

@@ -1,0 +1,60 @@
+.education-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.education-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.education-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    font-size: 1.2rem;
+    color: #0072ff;
+    margin-bottom: 15px;
+}
+
+.card .duration {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff0076;
+    margin-bottom: 15px;
+}
+
+.card .description {
+    font-size: 1rem;
+    color: #666;
+    white-space: pre-wrap; /* This will preserve new lines in the description text */
+}
+
+@media (max-width: 768px) {
+    .education-cards {
+        grid-template-columns: 1fr;
+    }
+}
