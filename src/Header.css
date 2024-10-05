@@ -1,0 +1,35 @@
+/* src/Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #15427a; /* Header background color */
+    color: white;
+    position: relative; /* Not fixed to make it scrollable */
+    z-index: 1; /* Ensure it is above other sections */
+}
+
+.header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff0076; /* Change color on hover */
+}
