@@ -25,7 +25,7 @@ const Footer = () => {
                     <div>
                         <b>Reach Out to me!</b>
                         <p></p>
-                        <p>Full Stack Developer | Python | C | React.js </p>
+                        <p>Full Stack Developer </p>
                         <div className="location">
                             <span className="location-icon">📍</span> Jaipur, India
                         </div>

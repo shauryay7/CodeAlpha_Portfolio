@@ -1,36 +1,31 @@
+// src/EducationSection.js
 import React from 'react';
-import './EducationSection.css'; // Import the CSS file for styling
+import './EducationSection.css';
 
 const EducationSection = () => {
-    const educationData = [
-        {
-            degree: 'B.Tech | Computer Science And Programming',
-            institution: 'SRM UNIVERSITY, Chennai',
-            duration: 'Expected in July 2027',
-            description: '• Completed online course on Programming Using Python, C++ Programming and Data Structures.\n• Received industrial training focused on Intel technologies and applications in various fields.\n• B. Tech in Computer Science (Specialization in Artificial Intelligence and Machine Learning).',
-        },
-        {
-            degree: 'High School Diploma',
-            institution: 'Delhi Public School, Jaipur',
-            duration: 'June 2023',
-            description: '',
-        },
-    ];
-
     return (
-        <section className="education-section">
-            <h2>Education and Training</h2>
-            <div className="education-cards">
-                {educationData.map((edu, index) => (
-                    <div className="card" key={index}>
-                        <h3>{edu.degree}</h3>
-                        <h4>{edu.institution}</h4>
-                        <p className="duration">{edu.duration}</p>
-                        <p className="description">{edu.description}</p>
-                    </div>
-                ))}
+        <>
+            <div className="title">
+                <h1>EDUCATION</h1>
             </div>
-        </section>
+            <div className="education-section">
+                <div className="education-item">
+                    <h3>B.Tech | Computer Science and Programming</h3>
+                    <p>SRM University, Chennai</p>
+                    <p>Expected Graduation: July 2027</p>
+                    <ul>
+                        <li>Completed online course on Programming Using Python and C++.</li>
+                        <li>Received industrial training focused on Intel technologies.</li>
+                        <li>Specialization in Artificial Intelligence and Machine Learning.</li>
+                    </ul>
+                </div>
+                <div className="education-item">
+                    <h3>High School Diploma</h3>
+                    <p>Delhi Public School, Jaipur</p>
+                    <p>Graduated: June 2023</p>
+                </div>
+            </div>
+        </>
     );
 };
 

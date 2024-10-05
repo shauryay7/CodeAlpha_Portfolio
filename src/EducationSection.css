@@ -1,60 +1,47 @@
-.education-section {
-    padding: 50px;
-    background-color: #f9f9f9;
+/* EducationSection.css */
+
+.title {
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.education-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+.education-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.education-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background-color: #fff;
+.education-item {
+    background: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
     padding: 20px;
-    border-radius: 10px;
+    margin: 10px 0;
+    width: 90%; /* Limit width */
+    max-width: 600px; /* Max width for cards */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Start invisible for animation */
+    transform: scale(0.9); /* Start slightly smaller */
+    animation: zoomIn 0.6s forwards; /* Animation */
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.card h4 {
-    font-size: 1.2rem;
-    color: #0072ff;
-    margin-bottom: 15px;
-}
-
-.card .duration {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #ff0076;
-    margin-bottom: 15px;
-}
-
-.card .description {
-    font-size: 1rem;
-    color: #666;
-    white-space: pre-wrap; /* This will preserve new lines in the description text */
-}
-
-@media (max-width: 768px) {
-    .education-cards {
-        grid-template-columns: 1fr;
+/* Zoom-in Animation */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
     }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* You can also add individual delays to each item if needed */
+.education-item:nth-child(1) {
+    animation-delay: 0.2s; /* Delay for the first item */
+}
+
+.education-item:nth-child(2) {
+    animation-delay: 0.4s; /* Delay for the second item */
 }

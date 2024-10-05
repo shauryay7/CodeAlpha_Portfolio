@@ -1,42 +1,140 @@
 .skills-section {
-    text-align: center;
-    padding: 50px 20px;
+    padding: 50px;
     background-color: #f9f9f9;
+    text-align: center;
+}
+
+.container {
+    padding: 50px;
+    display: flex;
+}
+
+.image {
+    margin-right: 150px;
+    width: 450px;
+    height: auto;
+    animation: zoomIn 1.5s ease-in-out;
+    /* Removed the shadow to blend it into the background */
+    filter: none;
+    /* Make the image blend seamlessly with the site */
+    background-color: transparent;
+    border-radius: 10px;
 }
 
 .skills-section h2 {
     font-size: 2.5rem;
-    color: #0072ff;
     margin-bottom: 40px;
+    position: relative;
+    animation: slideInFromLeft 1s ease-out;
 }
 
 .skills-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap; /* Wrap icons for responsiveness */
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .skill-item {
+    position: relative;
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+    overflow: hidden;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px) scale(1.1) rotate(10deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    filter: blur(40px);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.skill-item:hover::before {
+    opacity: 1;
 }
 
 .skill-icon {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #0072ff;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+    transform: rotate(360deg);
+    color: #ffffff;
 }
 
 .skill-item p {
     font-size: 1.2rem;
     margin-top: 10px;
     color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.skill-item:hover .skill-icon {
-    transform: scale(1.2);
+.skill-item:hover p {
+    color: #ffffff;
+}
+
+/* Floating Animation */
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.skill-item {
+    animation: floating 3s ease-in-out infinite;
+}
+
+/* Text Sliding in Animation */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Zoom in Animation for Image */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

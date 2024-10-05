@@ -57,7 +57,6 @@ const HeroSection = () => {
     return (
         <div className="hero-container">
             <div className="text-section">
-                {/* Ensure the id is unique to this specific element */}
                 <h1 id="code-text">Hi, I'm Shaurya</h1>
                 <p>
                     Passionate web developer skilled in React.js, Python, C, Java, and C++. Eager to take on challenges, learn, and grow. Ambitious student with strong communication and problem-solving skills.
