@@ -6,8 +6,8 @@ import './HeroSection.css'; // Ensure your CSS file is imported
 const HeroSection = () => {
     useEffect(() => {
         const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        const element = document.getElementById("code-text");
-        const originalText = "Hi, I'm Shaurya"; // Set the original text directly
+        const element = document.getElementById("name-text");
+        const originalText = "Shaurya"; // Set the original text directly for the name
         let interval;
 
         // Function to start the cracking effect
@@ -57,16 +57,18 @@ const HeroSection = () => {
     return (
         <div className="hero-container">
             <div className="text-section">
-                <h1 id="code-text">Hi, I'm Shaurya</h1>
+                <h1>
+                    Hi, I'm <span id="name-text">Shaurya</span>
+                </h1>
                 <p>
-                    Passionate web developer skilled in React.js, Python, C, Java, and C++. Eager to take on challenges, learn, and grow. Ambitious student with strong communication and problem-solving skills.
+                    Passionate developer skilled in React.js, Python, C, Java, and C++. Eager to take on challenges, learn, and grow. Ambitious student with strong communication and problem-solving skills.
                 </p>
                 <div className="social-links">
                     <a href="mailto:your-email@example.com" className="btn">Email</a>
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="btn">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/shaurya-yaduvanshi-43933b287/" target="_blank" rel="noopener noreferrer" className="btn">LinkedIn</a>
                     <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn">GitHub</a>
                 </div>
-                <a href="/resume.pdf" className="resume-btn">See My Resume</a>
+                <a href="https://drive.google.com/file/d/10n3TxAby5gitaeLy6XhYug7XllCtvBsm/view?usp=sharing" className="resume-btn">See My Resume</a>
             </div>
             <img src="https://media.tenor.com/CeDk6XdCgOUAAAAi/develop-web.gif" alt="Coding" className="hero-image" />
         </div>

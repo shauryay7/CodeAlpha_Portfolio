@@ -17,7 +17,6 @@
     font-size: 4rem;
     font-weight: bold;
     line-height: 1.2;
-    animation: slideIn 1s ease-in-out both;
     color: black; /* Original color to be replaced by JavaScript */
     overflow: hidden; /* Ensure hidden overflow for the effect */
     white-space: nowrap; /* Prevent wrapping */
@@ -60,7 +59,8 @@
 }
 
 .resume-btn {
-    margin-top: -10px;
+    margin-top: 10px;
+    margin-left: 55px;
     display: inline-block;
     background-color: #ff0076;
     padding: 10px 20px;
