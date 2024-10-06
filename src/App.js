@@ -15,8 +15,8 @@ function App() {
             <Header />
             <HeroSection />
             <SkillsSection />
-            <ActivitiesAndHonorsSection />
             <EducationSection />
+            <ActivitiesAndHonorsSection />
             <Footer /> {/* Add Footer at the end */}
         </div>
     );

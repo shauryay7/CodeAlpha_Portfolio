@@ -1,53 +1,124 @@
-/* EducationSection.css */
-.section{
-    background: linear-gradient(5deg, #00c6ff 0%, #0072ff 100%);
-    padding-top:4rem;
-}
-.title {
+/* Timeline Wrapper */
+#education-timeline {
+    padding: 100px 0;
+    background: #f7f7f7;
+    position: relative;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-.education-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Timeline Heading */
+#education-timeline h1 {
+    font-size: 3rem;
+    font-weight: 200;
+    margin-bottom: 50px;
 }
-.container{
-    display: flex;
-    justify-content: space-between;
+
+/* Timeline Line */
+.education-card-wrapper {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
 }
-.education-item {
-    background: #ffffff; /* White background */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 10px; /* Rounded corners */
+
+/* Vertical Line */
+.education-card-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #46b8e9; /* Changed to make it visible */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+/* Common Card Styles */
+.education-card {
+    position: relative;
+    background: #fff;
     padding: 20px;
-    margin: 10px 0;
-    width: 90%; /* Limit width */
-    max-width: 600px; /* Max width for cards */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Start invisible for animation */
-    transform: scale(0.9); /* Start slightly smaller */
-    animation: zoomIn 0.6s forwards; /* Animation */
+    box-shadow: 0 3px 10px rgb(34, 103, 255);
+    border-radius: 8px;
+    width: 45%;
+    margin: 20px 0;
 }
 
-/* Zoom-in Animation */
-@keyframes zoomIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+/* Alternate Cards */
+.education-card--step1 {
+    position: relative;
+    left: 0;
+    margin-left: 0;
+    transform: translateX(-10%); /* To align cards closer to the line */
 }
 
-/* You can also add individual delays to each item if needed */
-.education-item:nth-child(1) {
-    animation-delay: 0.2s; /* Delay for the first item */
+.education-card--step2 {
+    position: relative;
+    left: 50%;
+    margin-left: 0;
+    transform: translateX(10%); /* To align cards closer to the line */
 }
 
-.education-item:nth-child(2) {
-    animation-delay: 0.4s; /* Delay for the second item */
+.education-card .head {
+    background-color: #46b8e9;
+    color: white;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+}
+
+.education-card .head .number-box {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+.education-card .head h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.education-card .head h2 .small {
+    display: block;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.education-card .body {
+    padding: 20px;
+    text-align: left;
+}
+
+.education-card .body p {
+    margin-bottom: 10px;
+}
+
+.education-card img {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #ddd;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* Dots on the Line */
+.education-card-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #46b8e9;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-left: -7.5px;
+    margin-top: -7.5px;
 }

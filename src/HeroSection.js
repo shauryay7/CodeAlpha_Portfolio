@@ -66,7 +66,7 @@ const HeroSection = () => {
                 <div className="social-links">
                     <a href="mailto:your-email@example.com" className="btn">Email</a>
                     <a href="https://www.linkedin.com/in/shaurya-yaduvanshi-43933b287/" target="_blank" rel="noopener noreferrer" className="btn">LinkedIn</a>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn">GitHub</a>
+                    <a href="https://github.com/shauryay7" target="_blank" rel="noopener noreferrer" className="btn">GitHub</a>
                 </div>
                 <a href="https://drive.google.com/file/d/10n3TxAby5gitaeLy6XhYug7XllCtvBsm/view?usp=sharing" className="resume-btn">See My Resume</a>
             </div>

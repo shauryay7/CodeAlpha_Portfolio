@@ -23,7 +23,7 @@ const Footer = () => {
             <div className="content">
                 <div>
                     <div>
-                        <b>Reach Out to me!</b>
+                        <b className="title-f">Reach Out to me!</b>
                         <p></p>
                         <p>Full Stack Developer </p>
                         <div className="location">
@@ -33,18 +33,12 @@ const Footer = () => {
 
                     <div className="footer-social">
                         <a href="mailto:your-email@example.com"><FaEnvelope /></a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                        <a href="https://www.linkedin.com/in/shaurya-yaduvanshi-43933b287/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                        <a href="https://github.com/shauryay7" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                        <a href="https://www.instagram.com/_shaurya_y/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
                     </div>
                 </div>
 
-                <div className="footer-image">
-                    <img
-                        src="https://your-profile-image-link.jpg"
-                        alt="Profile"
-                    />
-                </div>
             </div>
 
             <svg style={{ position: 'fixed', top: '100vh' }}>

@@ -1,15 +1,17 @@
 /* ActivitiesAndHonorsSection.css */
 
 .title {
+    margin-top: 30px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    padding: 20px;
 }
 
 .activities-honors-section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 90px;
+    padding: 40px;
     justify-content: space-between;
 }
 

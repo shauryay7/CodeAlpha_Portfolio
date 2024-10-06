@@ -5,11 +5,24 @@
     justify-content: space-between;
     align-items: center;
     padding: 40px;
-    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
     color: white;
     height: 70vh;
     box-sizing: border-box;
     overflow: hidden;
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Fallback background */
+    animation: gradientAnimation 3s ease infinite; /* Add gradient animation */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Start from left */
+    }
+    50% {
+        background-position: 100% 50%; /* Go to right */
+    }
+    100% {
+        background-position: 0% 50%; /* Return to start */
+    }
 }
 
 .text-section h1 {
@@ -20,7 +33,6 @@
     color: black; /* Original color to be replaced by JavaScript */
     overflow: hidden; /* Ensure hidden overflow for the effect */
     white-space: nowrap; /* Prevent wrapping */
-
 }
 
 .text-section p {
@@ -30,9 +42,11 @@
     line-height: 1.6;
     animation: fadeInText 1.5s ease-in-out both;
 }
-.para{
+
+.para {
     padding: 20px;
 }
+
 .social-links {
     margin-left: 150px;
     padding: 40px;
