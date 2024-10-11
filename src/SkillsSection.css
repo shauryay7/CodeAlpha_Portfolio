@@ -1,46 +1,46 @@
 .skills-section {
-    padding: 50px;
+    padding: 20px;
     background-color: #f9f9f9;
     text-align: center;
 }
 
 .container {
-    padding: 50px;
+    padding: 20px;
     display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content for mobile */
 }
 
 .image {
-    margin-right: 150px;
-    width: 450px;
+    margin: 0 auto 20px auto; /* Center the image and add bottom margin for spacing */
+    width: 100%;
+    max-width: 300px; /* Limit the max width for smaller screens */
     height: auto;
     animation: zoomIn 1.5s ease-in-out;
-    /* Removed the shadow to blend it into the background */
-    filter: none;
-    /* Make the image blend seamlessly with the site */
     background-color: transparent;
     border-radius: 10px;
 }
 
 .skills-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    position: relative;
+    font-size: 2rem; /* Reduce heading size for mobile */
+    margin-bottom: 20px;
     animation: slideInFromLeft 1s ease-out;
 }
 
 .skills-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: row; /* Create 2 columns on mobile */
+    gap: 20px;
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
 }
 
 .skill-item {
-    position: relative;
     background: linear-gradient(135deg, #ffffff, #e0e0e0);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    width: 150px;
+    width: 100%;
+    width: 150px; 
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -57,26 +57,8 @@
     background: linear-gradient(135deg, #0072ff, #00c6ff);
 }
 
-.skill-item::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
-    filter: blur(40px);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: -1;
-}
-
-.skill-item:hover::before {
-    opacity: 1;
-}
-
 .skill-icon {
-    font-size: 3rem;
+    font-size: 3rem; /* Reduce icon size for mobile */
     color: #0072ff;
     transition: transform 0.3s ease;
 }
@@ -87,7 +69,7 @@
 }
 
 .skill-item p {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Adjust font size for mobile */
     margin-top: 10px;
     color: #333;
     font-weight: bold;
@@ -136,5 +118,70 @@
     100% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 30px 15px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .image {
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns on medium screens */
+        gap: 15px;
+    }
+
+    .skill-item {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skill-icon {
+        font-size: 4.8rem;
+    }
+
+    .skill-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .image {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns for smaller screens */
+        gap: 25px;
+    }
+
+    .skill-item {
+        max-width: 120px;
+    }
+
+    .skill-icon {
+        font-size: 2.5rem;
+    }
+
+    .skill-item p {
+        font-size: 0.8rem;
     }
 }

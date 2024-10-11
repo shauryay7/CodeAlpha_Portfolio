@@ -1,5 +1,4 @@
-/* Improved HeroSection.css */
-
+/* Base Styles */
 .hero-container {
     display: flex;
     justify-content: space-between;
@@ -10,51 +9,59 @@
     box-sizing: border-box;
     overflow: hidden;
     background: linear-gradient(135deg, #00c6ff, #0072ff); /* Fallback background */
-    animation: gradientAnimation 3s ease infinite; /* Add gradient animation */
+    animation: gradientAnimation 3s ease infinite; /* Gradient animation */
 }
 
+/* Gradient animation */
 @keyframes gradientAnimation {
     0% {
-        background-position: 0% 50%; /* Start from left */
+        background-position: 0% 50%;
     }
     50% {
-        background-position: 100% 50%; /* Go to right */
+        background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%; /* Return to start */
+        background-position: 0% 50%;
     }
+}
+
+/* Hero Text Section */
+.text-section {
+    padding-top: 2rem;
+    
+    text-align: center; /* Center align text within the section */
+    margin-left: 0; /* Remove the margin-left */
+    margin-bottom: 30px; /* Optional margin for spacing */
 }
 
 .text-section h1 {
-    margin-left: 100px;
+    padding: 2rem;
     font-size: 4rem;
     font-weight: bold;
     line-height: 1.2;
-    color: black; /* Original color to be replaced by JavaScript */
-    overflow: hidden; /* Ensure hidden overflow for the effect */
-    white-space: nowrap; /* Prevent wrapping */
+    color: black;
+    margin: 0 auto; /* Center horizontally */
+    white-space: normal; /* Allow wrapping if necessary */
 }
 
 .text-section p {
     font-size: 1.5rem;
-    margin-left: 100px;
     max-width: 550px;
     line-height: 1.6;
+    margin: 0 auto; /* Center paragraph */
     animation: fadeInText 1.5s ease-in-out both;
 }
 
-.para {
-    padding: 20px;
-}
-
+/* Social Links Section */
 .social-links {
-    margin-left: 150px;
     padding: 40px;
     display: flex;
-    gap: 15px;
     margin-top: 15px;
+    align-items: center;
+    justify-content: space-between;
 }
 
+/* Button styles */
 .btn {
     background-color: #fff;
     color: #0072ff;
@@ -74,7 +81,7 @@
 
 .resume-btn {
     margin-top: 10px;
-    margin-left: 55px;
+    gap: 25px;
     display: inline-block;
     background-color: #ff0076;
     padding: 10px 20px;
@@ -91,37 +98,13 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Hero Image Styles */
 .hero-image {
     margin-right: 150px;
     width: 450px;
     height: auto;
     animation: zoomIn 1.5s ease-in-out;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
-}
-
-@media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .text-section {
-        margin-bottom: 30px;
-    }
-
-    .hero-image {
-        width: 60%;
-        margin-top: 20px;
-    }
-
-    .text-section h1 {
-        font-size: 2.5rem;
-    }
-
-    .text-section p {
-        font-size: 1.1rem;
-    }
 }
 
 /* Keyframes for subtle animations */
@@ -136,17 +119,6 @@
     }
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 @keyframes zoomIn {
     from {
         opacity: 0;
@@ -155,5 +127,52 @@
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding: 20px;
+        height: auto; /* Allow the height to adjust based on content */
+    }
+
+    .text-section {
+        margin-left: 0;
+        margin-bottom: 20px; /* Add margin for spacing */
+        align-items: center;
+
+    }
+
+    .text-section h1 {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+        white-space: normal; /* Allow the text to wrap */
+        padding: 1rem;
+    }
+
+    .text-section p {
+        font-size: 1.2rem; /* Adjust font size for better readability */
+        margin-left: 0;
+    }
+
+    .social-links {
+        margin-left: 0;
+        padding: 20px 0;
+        justify-content: space-evenly; /* Center align social links */
+    }
+
+    .btn,
+    .resume-btn {
+        padding: 10px 20px; /* Reduce padding on buttons */
+        margin-left: 0;
+    }
+
+    .hero-image {
+        margin-right: 0;
+        width: 70%; /* Adjust image size for mobile */
+        margin-top: 20px;
     }
 }

@@ -1,20 +1,38 @@
-/* src/Header.css */
-
+/* Header styles */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 15px 40px;
     background-color: #15427a; /* Header background color */
     color: white;
     position: relative; /* Not fixed to make it scrollable */
     z-index: 1; /* Ensure it is above other sections */
 }
 
+/* Logo (SY) */
 .header .logo {
     font-size: 2rem;
     font-weight: bold;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
 }
 
 .navbar ul {
@@ -32,4 +50,27 @@
 
 .navbar a:hover {
     color: #ff0076; /* Change color on hover */
+}
+
+/* Responsive design: Hide navbar and show hamburger in smaller screens */
+@media (max-width: 768px) {
+    
+    .navbar {
+        display: none; /* Hide navbar in mobile view */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #15427a;
+        text-align: center;
+    }
+
+    .navbar.active {
+        display: flex; /* Show navbar when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon on mobile */
+    }
 }

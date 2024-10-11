@@ -25,7 +25,7 @@
     content: '';
     position: absolute;
     width: 4px;
-    background-color: #46b8e9; /* Changed to make it visible */
+    background-color: #46b8e9;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -41,23 +41,23 @@
     border-radius: 8px;
     width: 45%;
     margin: 20px 0;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Alternate Cards */
 .education-card--step1 {
-    position: relative;
     left: 0;
     margin-left: 0;
-    transform: translateX(-10%); /* To align cards closer to the line */
+    transform: translateX(-10%);
 }
 
 .education-card--step2 {
-    position: relative;
     left: 50%;
     margin-left: 0;
-    transform: translateX(10%); /* To align cards closer to the line */
+    transform: translateX(10%);
 }
 
+/* Card Header */
 .education-card .head {
     background-color: #46b8e9;
     color: white;
@@ -121,4 +121,27 @@
     left: 50%;
     margin-left: -7.5px;
     margin-top: -7.5px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .education-card {
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    .education-card-wrapper::before {
+        left: 3%; /* Move the line to the side */
+        margin-left: 0; /* Reset the margin */
+    }
+    
+    .education-card-wrapper::after {
+        left: 3%; /* Move the dot to match the line's new position */
+    }
+    
+    .education-card--step1, 
+    .education-card--step2 {
+        transform: none; /* Remove the translation on smaller screens */
+        left: 0;
+    }
 }

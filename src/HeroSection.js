@@ -57,7 +57,7 @@ const HeroSection = () => {
     return (
         <div className="hero-container">
             <div className="text-section">
-                <h1>
+                <h1 className='center'>
                     Hi, I'm <span id="name-text">Shaurya</span>
                 </h1>
                 <p>
