@@ -4,7 +4,7 @@ Welcome to my portfolio website! This project showcases my work as a web develop
 
 ## Demo
 
-Check out the live demo of the portfolio at [Portfolio Website Demo](https://portfolio-blush-rho-42.vercel.app/).
+Check out the live demo of the portfolio at [Portfolio Website Demo](https://code-alpha-portfolio-peach.vercel.app/).
 
 ## Table of Contents
 
